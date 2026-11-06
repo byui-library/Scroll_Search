@@ -46,7 +46,24 @@ python search_scroll.py "men's chorus" --csv mens_chorus.csv
 - `OR`, `AND`, `NOT` (capitals) combine terms; `*` matches word beginnings; `NEAR(word1 word2, 10)` finds words within 10 words of each other.
 - `--csv file.csv` saves every match to a spreadsheet you can open in Excel.
 
-You can also ask Claude to search this index for you; it knows where this folder is.
+## Searching with an AI assistant
+
+AI coding assistants that run on your computer can run these searches for you and read the results:
+Claude Code (desktop app, VS Code extension or command line), OpenAI Codex (app, VS Code extension
+or command line), GitHub Copilot in agent mode, and similar tools. Browser chat tools such as the
+regular ChatGPT or Claude.ai websites can't, because they can't run programs on your computer.
+
+1. Set up the repository as above.
+2. Open the `Scroll_Search` folder in the AI tool (or start the tool from a terminal in that folder).
+3. Ask in plain language, for example: "Find articles about the 1950s Homecoming parades and list the
+   issue, page and file path for each."
+
+The tool reads `AGENTS.md` (Codex and most others) or `CLAUDE.md` (Claude Code) in this folder,
+which tells it how to use the index, which spelling variants to try, and how to report results.
+Check the AI's summaries against the original scans before citing them; it can misread OCR text.
+
+Searches send the excerpts it reads to the AI company's servers, so use a tool your
+institution has approved for this kind of material.
 
 ## How the text was made, and its limits
 
