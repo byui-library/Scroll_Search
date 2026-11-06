@@ -1,0 +1,6 @@
+*.gz binary
+*.xlsx binary
+*.py text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.ps1 text eol=crlf

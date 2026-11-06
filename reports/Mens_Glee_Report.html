@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ricks Men's Glee</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: a single reading column like an archival finding aid; era sections, then a full location register in scrollable tables. */
+:root{
+  --paper:#f7f6f2; --ink:#22231f; --muted:#5d5f57; --rule:#d6d4cb; --card:#ffffff;
+  --accent:#6b2a3a; --accent-soft:#f1e6e8; --tag:#e9e7df;
+  --display:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,"Courier New",monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1b1c19; --ink:#e7e5de; --muted:#a6a79e; --rule:#3a3b36; --card:#232420;
+  --accent:#d99aa8; --accent-soft:#3a262b; --tag:#2e2f2a; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#1b1c19; --ink:#e7e5de; --muted:#a6a79e; --rule:#3a3b36; --card:#232420;
+  --accent:#d99aa8; --accent-soft:#3a262b; --tag:#2e2f2a; color-scheme:dark }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.prose{max-width:68ch}
+header{display:flex;flex-direction:column;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:22px}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,48px);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-size:26px;margin:0 0 6px;text-wrap:balance}
+h3{font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--muted)}
+p{margin:0}
+.lede{font-size:19px;color:var(--ink)}
+.meta{color:var(--muted);font-size:14px}
+section{display:flex;flex-direction:column;gap:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fact{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.fact b{font-family:var(--display);font-size:24px;font-variant-numeric:tabular-nums}
+.fact span{font-size:14px;color:var(--muted)}
+.eras{display:flex;flex-direction:column;gap:22px}
+.era{display:grid;grid-template-columns:150px 1fr;gap:18px;border-top:1px solid var(--rule);padding-top:16px}
+.era .yrs{font-family:var(--display);font-size:20px;color:var(--accent)}
+.era div{min-width:0;display:flex;flex-direction:column;gap:8px}
+@media (max-width:640px){.era{grid-template-columns:1fr;gap:6px}}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 24px}
+.people div{border-left:3px solid var(--accent-soft);padding-left:12px;min-width:0}
+.people b{display:block}
+.people span{font-size:14px;color:var(--muted)}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;font-size:15px}
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--tag);position:sticky;top:0}
+td.date{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+td.paper{white-space:nowrap}
+td.loc{font-family:var(--mono);font-size:12.5px;color:var(--muted);word-break:break-all;min-width:280px}
+td.loc .pg{display:inline-block;background:var(--tag);color:var(--ink);border-radius:3px;padding:0 5px;margin-left:4px;font-family:var(--body);font-size:12px;font-weight:600}
+td.loc .dup{display:block;margin-top:4px;font-size:11.5px}
+tr:last-child td{border-bottom:0}
+footer{border-top:1px solid var(--rule);padding-top:16px;color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:6px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Ricks College student newspapers · Scroll Rescan Project</div>
+  <h1>The Men’s Glee at Ricks College</h1>
+  <p class="lede">What the Student Rays, Purple Flash, Viking Flashes and Viking Scroll reported about the college’s men’s glee club and the men’s choruses that followed it, 1916–1988, with the location of every article.</p>
+  <p class="meta">Compiled from a text search of all 17,192 scanned pages in W:\DCAM\Scroll\Scroll Rescan Project. Dates and quotations come from the newspapers; the scanned text is machine-read, so check the original page before citing.</p>
+</header>
+
+<section>
+  <div class="facts">
+    <div class="fact"><b>24</b><span>articles on the Male / Men’s / Boys’ Glee (1916–1958)</span></div>
+    <div class="fact"><b>15</b><span>articles on the combined men’s and women’s glee clubs</span></div>
+    <div class="fact"><b>30</b><span>articles on the later Men’s Chorus and Men’s Choir (1964–1988)</span></div>
+    <div class="fact"><b>84</b><span>file locations listed, including duplicate scans</span></div>
+  </div>
+</section>
+
+<section class="prose">
+  <h2>Summary</h2>
+  <p>The papers first mention a Male Glee in 1916, when the Ricks Academy music department already had several “glees.” Through the 1920s and 1930s the Male Glee was a fixture of campus life: it sang at devotionals, commencement and Leadership Week, entertained the Rotary Club and the Chamber of Commerce, and entered the annual stunt fests. From the late 1930s the men’s and ladies’ glees often combined, most visibly for Handel’s “Messiah” each December and for General Conference in Salt Lake City in 1940 and 1948. The name “Male Glee Club” appears for the last time in 1958 under Dr. Chester Hill. After that the men sang as a Men’s or Male Chorus, organized in 1970 under Dr. Richard Robison and later led by Clyde Luke, and in 1980 and 1983 Ricks sent a men’s choir of about 400 voices to the priesthood session of General Conference.</p>
+</section>
+
+<section>
+  <h2>How the group changed</h2>
+  <div class="eras">
+    <div class="era"><div class="yrs">1916–1929</div><div>
+      <p><b>Male Glee, Ricks Academy and Ricks Normal College.</b> The music department runs separate men’s and ladies’ glees. The Male Glee sings at devotionals, for the stake priesthood school and the Rotary Club, gives a 30-minute concert after the Chamber of Commerce banquet at the Idamont Hotel (April 1928), and closes the 1928 commencement with “Blow Ye Winds.” In May 1928 the combined glees under Prof. F. F. Beale replace the annual opera with Coleridge-Taylor’s “Hiawatha’s Wedding Feast.”</p>
+    </div></div>
+    <div class="era"><div class="yrs">1934–1940</div><div>
+      <p><b>Male Glee Club in the Purple Flash and early Viking Scroll years.</b> The glee clubs sing at stake conferences, P.T.A. meetings and assemblies. The Male Glee Club takes second place in the 1935 stunt fest with “A Pirate Ship,” and the Men’s Glee performs “If Men Entertain at Football Teas Like Women Do” in 1936. Under Prof. John M. Anderson the two glees (about 100 voices) present the “Messiah” from 1937, and in April 1940 170 singers from the Glee Club sing at General Conference.</p>
+    </div></div>
+    <div class="era"><div class="yrs">1946–1958</div><div>
+      <p><b>Boys’ Glee and Male Glee after the war.</b> In 1946 the Boys’ Glee meets twice a week and joins the Girls’ Glee as a combined chorus on Fridays. In 1947 the Male Glee sings “Dear Land of Hope,” “House by the Side of the Road” and “Grey Bays” during Leadership Week, and a men’s chorus sings on Anderson’s 1949 radio broadcasts. In 1958 Dr. Chester Hill’s Male Glee Club sings Richter’s “The Creation” and represents the “Unconquerable Viking” in the Homecoming assembly.</p>
+    </div></div>
+    <div class="era"><div class="yrs">1964–1976</div><div>
+      <p><b>Men’s Chorus and Male Chorus.</b> An Associated Men’s Chorus led by Murell Johnson sings at a 1964 assembly. A Men’s Chorus is organized under Dr. Richard W. Robison in 1970 and gives joint Christmas, fall and spring concerts with the Women’s Choir. By 1972 Clyde Luke directs the Men’s Choir; it meets three mornings a week, sings at Baccalaureate and in the “Messiah,” and appears in televised Christmas devotionals.</p>
+    </div></div>
+    <div class="era"><div class="yrs">1980–1988</div><div>
+      <p><b>General Conference men’s choirs.</b> Ricks organizes a men’s choir of students, faculty and staff, about 400 voices, for the priesthood session of General Conference in October 1980 and again in April 1983 (more than 390 voices), both directed by Dr. Richard Robison. In December 1988 Ricks is invited to provide a men’s choir for the April 1989 conference.</p>
+    </div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Directors named in the articles</h2>
+  <div class="people">
+    <div><b>Prof. Harry Dean</b><span>Male Glee, 1927–29</span></div>
+    <div><b>Prof. Billeter</b><span>Ladies’ Glee and Leadership music, 1927–28</span></div>
+    <div><b>Prof. F. F. Beale</b><span>Combined glee clubs, “Hiawatha’s Wedding Feast,” 1928</span></div>
+    <div><b>Prof. John M. Anderson</b><span>Glee clubs, “Messiah,” men’s chorus broadcasts, 1937–1950</span></div>
+    <div><b>Dr. Chester W. Hill</b><span>Male Glee Club, 1958</span></div>
+    <div><b>Murell Johnson</b><span>Associated Men’s Chorus, 1964</span></div>
+    <div><b>Dr. Richard W. Robison</b><span>Men’s Chorus, 1970–71; General Conference men’s choirs, 1980 and 1983</span></div>
+    <div><b>Clyde E. Luke</b><span>Men’s Choir / Male Chorus, 1971–73</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Repertoire mentioned</h2>
+  <ul class="plain prose">
+    <li>“Blow Ye Winds” (1928 commencement)</li>
+    <li>“Hiawatha’s Wedding Feast,” Coleridge-Taylor (combined glees, 1928)</li>
+    <li>Handel, “Messiah” (combined glees, annually from 1937)</li>
+    <li>“Dear Land of Hope,” “House by the Side of the Road,” “Grey Bays” (1947)</li>
+    <li>“The Creation,” Richter, with a reading by Joseph Catmull (1958)</li>
+    <li>“Almighty God of Our Fathers” (1971)</li>
+    <li>“Adam and Eve” and “Dry Bones” (male chorus numbers, 1976)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Article locations: the Male Glee, 1916–1958</h2>
+  <p class="meta prose">Articles that name the men’s group directly as Male Glee, Men’s Glee, Boys’ Glee or men’s chorus.</p>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Paper</th><th>What the article says</th><th>Location</th></tr></thead><tbody>
+<tr><td class="date">May 1916</td><td class="paper">Student Rays</td><td>Sophomore class report lists members in the Ladies’ Glee and the Male Glee.</td><td class="loc">Student Rays\Box 9 February- May 1916 (No February folders)\Folder 19 May 1916 Vol. 11 No. 3\StudentRays_1916-05_combined.tif.pdf <span class="pg">p. 30</span></td></tr>
+<tr><td class="date">Nov. 1916</td><td class="paper">Student Rays</td><td>The music department says “our glees” have built a reputation and three glees are being organized for the year.</td><td class="loc">Student Rays\Box 10 November 1916- December 1917\Folder 1 November 1916 Vol. 12 No. 1\StudentRays_1916-11_combined.tif.pdf <span class="pg">p. 22</span></td></tr>
+<tr><td class="date">Nov. 23, 1926</td><td class="paper">Student Rays</td><td>The choir and the Male Glee have given special numbers in devotional exercises.</td><td class="loc">Student Rays\Box 11 February 1918- June 1933\Folder 29 November 23, 1926\PDF\StudentRays_1926-11-23.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Dec. 21, 1927</td><td class="paper">Student Rays</td><td>“Male Glee” department column: the Male Glee sang for the Rotary Club, and Professor Dean is praised for interesting the students.</td><td class="loc">Scroll_StudentRays_19271221\TIFF\001403\FN-000004.tif <span class="pg">scan 4</span><span class="dup">also: Scroll_StudentRays_19271221\TIFF\001403\FN-000008.tif <span class="pg">scan 8</span></span><span class="dup">also: Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\PDF\006359\FN-000029.pdf <span class="pg">p. 1</span></span></td></tr>
+<tr><td class="date">1927–28</td><td class="paper">Scroll (bound 1927–29)</td><td>Humorous “Male Glee” column; notes the group sang before the stake priesthood school.</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\TIFF\006359\FN-000031.tif <span class="pg">scan 31</span></td></tr>
+<tr><td class="date">1928, Leadership Week</td><td class="paper">Scroll (bound 1927–29)</td><td>Leadership course outline: daily tabernacle meetings will include selections by the school orchestra, the Male Glee and the Ladies’ Glee.</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\PDF\006359\FN-000038.pdf <span class="pg">p. 1</span><span class="dup">also: Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\TIFF\006359\FN-000034.tif <span class="pg">scan 34</span></span></td></tr>
+<tr><td class="date">1928</td><td class="paper">Scroll (bound 1927–29)</td><td>A district program lists “Choruses … Male Glee Club, R. C.”</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\PDF\006359\FN-000050.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Apr. 25, 1928</td><td class="paper">Scroll (bound 1927–29)</td><td>After the Chamber of Commerce banquet at the Idamont Hotel, the college Male Glee gave a 30-minute concert, “well rendered and well received,” and also sang for Rotary members and their wives.</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\PDF\006359\FN-000054.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">May 1928</td><td class="paper">Scroll (bound 1927–29)</td><td>In place of the annual opera, the combined men’s and women’s glee clubs under Prof. F. F. Beale will present Coleridge-Taylor’s cantata “Hiawatha’s Wedding Feast” on May 11.</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\PDF\006359\FN-000057.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">May 1928, Commencement</td><td class="paper">Scroll (bound 1927–29)</td><td>Commencement program: “Blow Ye Winds” sung by the Male Glee.</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\PDF\006359\FN-000058.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Nov. 6, 1935</td><td class="paper">The Purple Flash</td><td>Stunt fest: the Male Glee Club won second place with its stunt “A Pirate Ship.”</td><td class="loc">The Purple Flash\Box 1 October 1933- October 1937\Folder 21 November 6, 1935 Vol. 32 No. 3\ThePurpleFlash_1935-11-06_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Feb. 11, 1936</td><td class="paper">The Purple Flash</td><td>The glee clubs have sung in assemblies, P.T.A. meetings and conferences; the music department offers classes in Ladies’ and Male Glee.</td><td class="loc">The Purple Flash\Box 1 October 1933- October 1937\Folder 26 February 11, 1936 Vol. 30 No. 14\ThePurpleFlash_1936-02-11_002.tif <span class="pg">scan 2</span></td></tr>
+<tr><td class="date">Oct. 23, 1936</td><td class="paper">The Purple Flash</td><td>Homecoming stunts: the Men’s Glee performed “If Men Entertain at Football Teas Like Women Do.”</td><td class="loc">The Purple Flash\Box 1 October 1933- October 1937\Folder 29 October 23, 1936 Vol. 31 No. 1\ThePurpleFlash_1936-10-23_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Nov. 11, 1936</td><td class="paper">The Purple Flash</td><td>The male and ladies’ glees took part in the stunt fest.</td><td class="loc">The Purple Flash\Box 1 October 1933- October 1937\Folder 30 November 11, 1936 Vol. 31 No. 2\ThePurpleFlash_1936-11-11_003.tif <span class="pg">scan 3</span></td></tr>
+<tr><td class="date">Jan. 26, 1938</td><td class="paper">Viking Flashes</td><td>Stunt fest entries included the Male Glee.</td><td class="loc">Viking Flashes\Box 1 October 1937- April 1938\Folder 14 January 26, 1938 Vol. 50 No. 6\VikingFlashes_1938-01-26_002.tif <span class="pg">scan 2</span><span class="dup">also: Viking Scroll\Box 2 1938-1947\2 January 26, 1938 Vol. 50 No. 6\VikingScroll_1938-01-26_002.tif <span class="pg">scan 2</span></span></td></tr>
+<tr><td class="date">Sept. 2, 1938</td><td class="paper">Viking Scroll</td><td>Music department plans: in the fall quarter the Male Glee will produce a minstrel show; later the two glees will combine for a Christmas oratorio.</td><td class="loc">Viking Scroll\Box 2 1938-1947\4 September 2, 1938 Vol. 51 No. 1\VikingScroll_1938-09-02_002.tif <span class="pg">scan 2</span></td></tr>
+<tr><td class="date">Feb. 8, 1946</td><td class="paper">Viking Scroll</td><td>Schedule change: the Boys’ Glee now meets Monday and Wednesday, the Girls’ Glee Tuesday and Thursday, and the combined chorus on Friday.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 56 February 8, 1946 Vol. 58 No. 7\VikingScroll_1946-02-08_001.tif <span class="pg">scan 1</span><span class="dup">also: Viking Scroll\Box 2 1938-1947\44 February 8, 1946 Vol. 58 No. 7\VikingScroll_1946-02-08_001.tif <span class="pg">scan 1</span></span></td></tr>
+<tr><td class="date">Mar. 5, 1947</td><td class="paper">Viking Scroll</td><td>The music department supported Leadership Week through the mixed chorus, the Male Glee and soloists (Prof. John M. Anderson).</td><td class="loc">Viking Scroll\Box 2 1938-1947\64 March 5, 1947 Vol. 59 No. 18\VikingScroll_1947-03-05_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Mar. 5, 1947</td><td class="paper">Viking Scroll</td><td>Leadership Week: the Male Glee sang “Dear Land of Hope,” “House by the Side of the Road” and “Grey Bays,” and sang with the College Chorus at the tabernacle.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 78 March 5, 1947 Vol. 59 No. 18\VikingScroll_1947-03-05_004.tif <span class="pg">scan 4</span><span class="dup">also: Viking Scroll\Box 2 1938-1947\64 March 5, 1947 Vol. 59 No. 18\VikingScroll_1947-03-05_004.tif <span class="pg">scan 4</span></span></td></tr>
+<tr><td class="date">Nov. 15, 1949</td><td class="paper">Viking Scroll</td><td>A radio broadcast program included the male chorus under Professor Anderson.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 108 November 15, 1949 Vol. 62 No. 5\VikingScroll_1949-11-15_003.tif <span class="pg">scan 3</span><span class="dup">also: Viking Scroll\Box 2 1938-1947\80 November 15, 1949 Vol. 62 No. 5\VikingScroll_1949-11-15_003.tif <span class="pg">scan 3</span></span><span class="dup">also: Viking Scroll\Box 3 1949-1957\4 November 15, 1949 Vol. 62 No. 5\VikingScroll_1949-11-15_03.tif <span class="pg">scan 3</span></span></td></tr>
+<tr><td class="date">Nov. 29, 1949</td><td class="paper">Viking Scroll</td><td>A half-hour radio program will include the men’s chorus under Prof. John M. Anderson.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 109 November 29, 1949 Vol. 62 No. 6\VikingScroll_1949-11-29_002.tif <span class="pg">scan 2</span><span class="dup">also: Viking Scroll\Box 2 1938-1947\81 November 29, 1949 Vol. 62 No. 6\VikingScroll_1949-11-29_002.tif <span class="pg">scan 2</span></span><span class="dup">also: Viking Scroll\Box 3 1949-1957\5 November 29, 1949 Vol. 62 No. 6\VikingScroll_1949-11-29_02.tif <span class="pg">scan 2</span></span></td></tr>
+<tr><td class="date">May 14, 1958</td><td class="paper">Viking Scroll</td><td>Jubilee program: “The Creation” sung by the Ricks College Male Glee Club directed by Dr. Chester Hill, with a reading by Joseph Catmull.</td><td class="loc">Viking Scroll\Box 4 1958-1965\9 May 14, 1958 Vol. 70 No. 15\VikingScroll_1958-05-14.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">May 27, 1958</td><td class="paper">Viking Scroll</td><td>Choir concert: “The Creation” by Richter sung by the men’s chorus with lighting effects (Dr. Hill).</td><td class="loc">Viking Scroll\Box 4 1958-1965\10 May 27, 1958 Vol. 70 No. 16\VikingScroll_1958-05-27.pdf <span class="pg">p. 4</span></td></tr>
+<tr><td class="date">Oct. 17, 1958</td><td class="paper">Viking Scroll</td><td>Homecoming assembly: a musical portrayal of the “Unconquerable Viking,” represented by the Male Glee Club, through 70 years of Ricks history.</td><td class="loc">Viking Scroll\Box 4 1958-1965\13 October 17, 1958 Vol. 71 No. 3\VikingScroll_1958-10-17.pdf <span class="pg">p. 1</span></td></tr>
+  </tbody></table></div>
+</section>
+
+<section>
+  <h2>Article locations: combined glee clubs</h2>
+  <p class="meta prose">Articles about the “glee clubs” or “glees” together, men and women, mostly the annual “Messiah” and General Conference appearances.</p>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Paper</th><th>What the article says</th><th>Location</th></tr></thead><tbody>
+<tr><td class="date">1927–29</td><td class="paper">Scroll (bound 1927–29)</td><td>Leadership Week: the orchestra and glee clubs under Professors Dean and Billeter furnish music for the assemblies.</td><td class="loc">Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\TIFF\006359\FN-000018.tif <span class="pg">scan 18</span></td></tr>
+<tr><td class="date">Jan. 23, 1929</td><td class="paper">Student Rays</td><td>Opera preparations (“Pirates of Penzance”): “the male chorus is practically the same as last year.”</td><td class="loc">Student Rays\Box 11 February 1918- June 1933\Folder 36 January 23, 1929\PDF\StudentRays_1929-01-23.pdf <span class="pg">p. 1</span><span class="dup">also: Scroll_1927-1929\Scoll_1927-1929\Scroll_1927-1929_bound\TIFF\006359\FN-000012.tif <span class="pg">scan 12</span></span></td></tr>
+<tr><td class="date">Dec. 20, 1934</td><td class="paper">The Purple Flash</td><td>The Ricks College glee clubs joined the stake choir to sing at both sessions of stake conference.</td><td class="loc">The Purple Flash\Box 1 October 1933- October 1937\Folder 12 December 20, 1934 Vol. 29 No. 5\ThePurpleFlash_1934-12-20_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Oct. 1937</td><td class="paper">Viking Flashes</td><td>The band and glees prepare music for Founder’s Day; the glees are preparing the “Messiah” for St. Anthony and Rexburg.</td><td class="loc">Viking Flashes\Box 1 October 1937- April 1938\Folder 1 October 1937 (Home Coming Edition) Vol. 50 No. 1\VikingFlashes_1937-10.pdf <span class="pg">p. 3</span></td></tr>
+<tr><td class="date">Oct. 22, 1937</td><td class="paper">The Purple Flash</td><td>Both glees, about 100 voices, will present Handel’s “Messiah” near Christmas.</td><td class="loc">The Purple Flash\Box 1 October 1933- October 1937\Folder 43 October 22, 1937 Vol. 50 No. 1\ThePurpleFlash_1937-10-22_003.tif <span class="pg">scan 3</span></td></tr>
+<tr><td class="date">Dec. 10, 1937</td><td class="paper">Viking Flashes</td><td>“Chorus will render famed oratorio”: the “Messiah” will be presented at the tabernacle by the combined glee clubs.</td><td class="loc">Viking Flashes\Box 1 October 1937- April 1938\Folder 7 December 10, 1937 Vol. 50 No. 4\VikingFlashes_1937-12-10_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Dec. 22, 1937</td><td class="paper">Viking Flashes</td><td>The glees presented the “Messiah” in St. Anthony and Idaho Falls; it was broadcast over KID.</td><td class="loc">Viking Flashes\Box 1 October 1937- April 1938\Folder 10 December 22, 1937 Vol. 50 No. 5\VikingFlashes_1937-12-22_003.tif <span class="pg">scan 3</span></td></tr>
+<tr><td class="date">Dec. 21, 1939</td><td class="paper">Viking Scroll</td><td>The glee club sang selections from the “Messiah” at an assembly.</td><td class="loc">Viking Scroll\Box 2 1938-1947\17 December 21, 1939 Vol. 25 No. 6\VikingScroll_1939-12-21_002.tif <span class="pg">scan 2</span></td></tr>
+<tr><td class="date">Apr. 15, 1940</td><td class="paper">Viking Scroll</td><td>170 singers from the Ricks College Glee Club and 135 Rexburg Stake ward choir members sang at General Conference in the Salt Lake Tabernacle.</td><td class="loc">Viking Scroll\Box 2 1938-1947\21 April 15, 1940 Vol. 52 No. 11\VikingScroll_1940-04-15_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Oct. 2, 1946</td><td class="paper">Viking Scroll</td><td>“Glee Club prominent in music activities”: about 155 students are enrolled in the chorus (Prof. Anderson).</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 62 October 2, 1946 Vol. 59 No. 2\VikingScroll_1946-10-02_004.tif <span class="pg">scan 4</span></td></tr>
+<tr><td class="date">Feb. 26, 1947</td><td class="paper">Viking Scroll</td><td>Review, “An Evening with the Glee Club”: songs included “One World,” “O Savior of the World,” “Cindy” and “The Dying Cowboy.”</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 77 February 26, 1947 Vol. 59 No. 17\VikingScroll_1947-02-26_002.tif <span class="pg">scan 2</span></td></tr>
+<tr><td class="date">May 7, 1947</td><td class="paper">Viking Scroll</td><td>The Glee Club will sing at the North Rexburg Stake conference, its fifth public appearance of the year.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 86 May 7, 1947 Vol. 59 No. 26\VikingScroll_1947-05-07_004.tif <span class="pg">scan 4</span><span class="dup">also: Viking Scroll\Box 2 1938-1947\72 May 7, 1947 Vol. 29 No. 26\VikingScroll_1947-05-07_004.tif <span class="pg">scan 4</span></span></td></tr>
+<tr><td class="date">Nov. 19, 1947</td><td class="paper">Viking Scroll</td><td>The College-Community Symphony opens its season with the combined glee clubs in the “Messiah.”</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 95 November 19, 1947 Vol. 60 No. 8\VikingScroll_1947-11-19_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">Feb. 18, 1948</td><td class="paper">Viking Scroll</td><td>The college chorus of men’s and women’s glees will sing at an Idaho Falls concert to raise funds for an organ.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 101 February 18, 1948 Vol. 60 No. 15\VikingScroll_1948-02-18_001.tif <span class="pg">scan 1</span></td></tr>
+<tr><td class="date">June 2, 1948</td><td class="paper">Viking Scroll</td><td>Year in review: the glee club went to Salt Lake City and sang in General Conference.</td><td class="loc">Viking Scroll\Box 1 October 1938- May 1956\Folder 103 June 2, 1948 Vol. 60 No. 17\VikingScroll_1948-06-02_002.tif <span class="pg">scan 2</span></td></tr>
+  </tbody></table></div>
+</section>
+
+<section>
+  <h2>Article locations: Men’s Chorus and Men’s Choir, 1964–1988</h2>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Paper</th><th>What the article says</th><th>Location</th></tr></thead><tbody>
+<tr><td class="date">Apr. 27, 1964</td><td class="paper">Viking Scroll</td><td>The Associated Men’s Chorus, directed by Murell Johnson, furnished the music for an assembly.</td><td class="loc">Viking Scroll\Box 4 1958-1965\73 April 27, 1964 Vol. 76 No. 17\VikingScroll_1964-04-27.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Sept. 25, 1970</td><td class="paper">Viking Scroll</td><td>“Ricks Choirs Organize”: the A Cappella Choir and the Men’s Chorus organized under Dr. Richard W. Robison.</td><td class="loc">Viking Scroll\Box 8 1970\24 September 25, 1970 Vol. 83 No. 6\VikingScroll_1970-09-25.pdf <span class="pg">p. 4</span></td></tr>
+<tr><td class="date">Nov. 13, 1970</td><td class="paper">Viking Scroll</td><td>Concerts during the year feature the Women’s and Men’s Chorus, the A Cappella Choir and the Symphony Orchestra.</td><td class="loc">Viking Scroll\Box 8 1970\31 November 13, 1970 Vol. 83 No. 13\VikingScroll_1970-11-13.pdf <span class="pg">p. 2</span></td></tr>
+<tr><td class="date">Dec. 4, 1970</td><td class="paper">Viking Scroll</td><td>The Women’s Choir and Male Chorus (Florence Bowman and Dr. Richard Robison) will present a combined Christmas concert on Dec. 7.</td><td class="loc">Viking Scroll\Box 8 1970\33 December 4, 1970 Vol. 83 No. 15\VikingScroll_1970-12-04.pdf <span class="pg">p. 6</span><span class="dup">also: Viking Scroll\Box 8 1970\33 December 4, 1970 Vol. 83 No. 15\VikingScroll_1970-12-04.pdf <span class="pg">p. 3</span></span></td></tr>
+<tr><td class="date">Feb. 26, 1971</td><td class="paper">Viking Scroll</td><td>Profile: Morgan Williams is president of the Men’s Chorus.</td><td class="loc">Viking Scroll\Box 9 1971\7 February 26, 1971 Vol. 83 No. 23\VikingScroll_1971-02-26.pdf <span class="pg">p. 9</span></td></tr>
+<tr><td class="date">Mar. 19, 1971</td><td class="paper">Viking Scroll</td><td>The Women’s Choir and Men’s Choir will present an assembly in the fieldhouse.</td><td class="loc">Viking Scroll\Box 9 1971\10 March 19, 1971 Vol. 83 No. 26\VikingScroll_1971-03-19.pdf <span class="pg">p. 16</span></td></tr>
+<tr><td class="date">Oct. 8, 1971</td><td class="paper">Viking Scroll</td><td>The General Conference choir included members of the male chorus.</td><td class="loc">Viking Scroll\Box 9 1971\23 October 8, 1971 Vol. 84 No. 8\VikingScroll_1971-10-08.pdf <span class="pg">p. 10</span></td></tr>
+<tr><td class="date">Nov. 12, 1971</td><td class="paper">Viking Scroll</td><td>The Women’s and Male Chorus will present their annual fall concert.</td><td class="loc">Viking Scroll\Box 9 1971\28 November 12, 1971 Vol. 84 No. 13\VikingScroll_1971-11-12.pdf <span class="pg">p. 9</span></td></tr>
+<tr><td class="date">Nov. 19, 1971</td><td class="paper">Viking Scroll</td><td>Review: the Male Chorus opened the combined concert with “Almighty God of Our Fathers.”</td><td class="loc">Viking Scroll\Box 9 1971\29 November 19, 1971 Vol. 84 No. 14\VikingScroll_1971-11-19.pdf <span class="pg">p. 7</span></td></tr>
+<tr><td class="date">Dec. 10, 1971</td><td class="paper">Viking Scroll</td><td>The Christmas program includes all the choirs, among them the Men’s Choir.</td><td class="loc">Viking Scroll\Box 9 1971\31 December 10, 1971 Vol. 84 No. 16\VikingScroll_1971-12-10.pdf <span class="pg">p. 5</span></td></tr>
+<tr><td class="date">Mar. 28, 1972</td><td class="paper">Viking Scroll</td><td>Women’s Week schedule: Male Chorus performance in the Kirkham Auditorium.</td><td class="loc">Viking Scroll\Box 10 1972\22 March 28, 1972 Vol. 84 No. 38\VikingScroll_1972-03-28 B.pdf <span class="pg">p. 4</span></td></tr>
+<tr><td class="date">Mar. 31, 1972</td><td class="paper">Viking Scroll</td><td>Concert notice: Clyde Luke directs the Men’s Choir.</td><td class="loc">Viking Scroll\Box 10 1972\23 March 31, 1972 Vol. 84 No. 39\VikingScroll_1972-03-31.pdf <span class="pg">p. 4</span></td></tr>
+<tr><td class="date">Apr. 25, 1972</td><td class="paper">Viking Scroll</td><td>The Women’s Choir and Male Chorus combine for a concert; the Male Chorus will also sing at Baccalaureate.</td><td class="loc">Viking Scroll\Box 10 1972\28 April 25, 1972 Vol. 84 No. 44\VikingScroll_1972-04-25.pdf <span class="pg">p. 8</span></td></tr>
+<tr><td class="date">Aug. 30, 1972</td><td class="paper">Viking Scroll</td><td>Notice: the Male Chorus needs three first tenors; it meets Monday, Wednesday and Friday at 9 a.m. (Bro. Luke).</td><td class="loc">Viking Scroll\Box 10 1972\33 August 30, 1972 Vol. 85 No. 3\VikingScroll_1972-08-30.pdf <span class="pg">p. 8</span><span class="dup">also: Viking Scroll\Box 10 1972\34 September 1, 1972 Vol. 85 No. 4\VikingScroll_1972-09-01.pdf <span class="pg">p. 8</span></span></td></tr>
+<tr><td class="date">Nov. 28, 1972</td><td class="paper">Viking Scroll</td><td>The Women’s Choir and Male Chorus will present a Christmas concert on Dec. 3; Male Chorus president is Tom Horn; both choirs will sing in the “Messiah.”</td><td class="loc">Viking Scroll\Box 10 1972\58 November 28, 1972 Vol. 85 No. 28\VikingScroll_1972-11-28.pdf <span class="pg">p. 2</span></td></tr>
+<tr><td class="date">Mar. 30, 1973</td><td class="paper">Viking Scroll</td><td>Women’s Week: Male Chorus program in the Kirkham Auditorium.</td><td class="loc">Viking Scroll\Box 11 1973\23 March 30, 1973 Vol. 85 No. 55\VikingScroll_1973-03-30.pdf <span class="pg">p. 8</span></td></tr>
+<tr><td class="date">Dec. 4, 1973</td><td class="paper">Viking Scroll</td><td>A televised Christmas devotional features the Male Choir with the other college choirs.</td><td class="loc">Viking Scroll\Box 11 1973\60 December 4, 1973 Vol. 86 No. 28\VikingScroll_1973-12-04.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Dec. 7, 1973</td><td class="paper">Viking Scroll</td><td>The combined choir, including the Men’s Choir, sang part of the “Messiah.”</td><td class="loc">Viking Scroll\Box 11 1973\61 December 7, 1973 Vol. 86 No. 29\VikingScroll_1973-12-07.pdf <span class="pg">p. 3</span></td></tr>
+<tr><td class="date">Feb. 12, 1974</td><td class="paper">Viking Scroll</td><td>A special number by the male choir at the devotional.</td><td class="loc">Viking Scroll\Box 12 1974\10 February 12, 1974 Vol. 86 No. 42\Viking Scroll_1974-02-12.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Apr. 16, 1976</td><td class="paper">Viking Scroll</td><td>The spring concert included a humorous male chorus number, “Adam and Eve.”</td><td class="loc">Viking Scroll\Box 14 1976\13 April 16, 1976 Vol. 88 No. 27\Viking Scroll_1976-04-16.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Dec. 3, 1976</td><td class="paper">Viking Scroll</td><td>The male chorus of the College Choir will sing the spiritual “Dry Bones.”</td><td class="loc">Viking Scroll\Box 14 1976\27 December 3, 1976 Vol. 89 No. 13\Viking Scroll_1976-12-03.pdf <span class="pg">p. 1</span></td></tr>
+<tr><td class="date">Oct. 7, 1980</td><td class="paper">Viking Scroll</td><td>“Ricks choir performs at priesthood session”: the Ricks College Men’s Choir sang at General Conference under Dr. Richard Robison.</td><td class="loc">Viking Scroll\Box 18 1980\21 October 7, 1980 Vol. 93 No. 05\Viking Scroll_1980-10-07.pdf <span class="pg">p. 10</span></td></tr>
+<tr><td class="date">Nov. 10, 1981</td><td class="paper">Viking Scroll</td><td>A recruiting note recalls the 400-voice men’s choir that sang at General Conference the year before.</td><td class="loc">Viking Scroll\Box 19 1981\23 November 10, 1981 Vol. 95 No. 10\Viking Scroll_1981-11-10.pdf <span class="pg">p. 6</span></td></tr>
+<tr><td class="date">Jan. 11, 1983</td><td class="paper">Viking Scroll</td><td>Ricks is again asked to organize a men’s choir for April General Conference; recalls 400 men at the October 1980 conference.</td><td class="loc">Viking Scroll\Box 21 1983\1 January 11, 1983 Vol. 97 No. 01\Viking Scroll_1982-01-11.pdf <span class="pg">p. 16</span></td></tr>
+<tr><td class="date">Mar. 24, 1983</td><td class="paper">Viking Scroll</td><td>The Spring Spectacular will feature a 400-voice men’s choir with the other college groups.</td><td class="loc">Viking Scroll\Box 21 1983\11 March 24, 1983 Vol. 97 No. 11\Viking Scroll_1983-03-24.pdf <span class="pg">p. 22</span><span class="dup">also: Viking Scroll\Box 21 1983\11 March 24, 1983 Vol. 97 No. 11\Viking Scroll_1983-03-24.pdf <span class="pg">p. 8</span></span></td></tr>
+<tr><td class="date">Mar. 29, 1983</td><td class="paper">Viking Scroll</td><td>At the Spring Spectacular the General Conference Male Chorus sang two of its conference numbers.</td><td class="loc">Viking Scroll\Box 21 1983\12 March 29, 1983 Vol. 97 No. 12\Viking Scroll_1983-03-29.pdf <span class="pg">p. 15</span></td></tr>
+<tr><td class="date">Mar. 29, 1983</td><td class="paper">Viking Scroll</td><td>Robison and a men’s choir of more than 390 voices travel to sing at the April 2 priesthood session, their second trip after October 1980.</td><td class="loc">Viking Scroll\Box 21 1983\12 March 29, 1983 Vol. 97 No. 12\Viking Scroll_1983-03-29.pdf <span class="pg">p. 23</span></td></tr>
+<tr><td class="date">Mar. 24, 1988</td><td class="paper">Viking Scroll</td><td>Says the last time a Ricks choir sang at General Conference was in 1982, when a men’s choir sang at the priesthood session.</td><td class="loc">Viking Scroll\Paat Projects 1988\03 March\19880324\Scl1988032424.tif <span class="pg">scan 24</span></td></tr>
+<tr><td class="date">Nov. 12, 1988</td><td class="paper">Viking Scroll</td><td>Alumni profile: Andrus, student body president in 1922–23, sang in the operas and the Men’s Choir.</td><td class="loc">Viking Scroll\Paat Projects 1988\11 November\19881112\Scl1988111225.tif <span class="pg">scan 25</span></td></tr>
+<tr><td class="date">Dec. 13, 1988</td><td class="paper">Viking Scroll</td><td>For the second year in a row, Ricks is invited to provide a men’s choir for April General Conference.</td><td class="loc">Viking Scroll\Paat Projects 1988\12 December\19881213\Scl1988121309.tif <span class="pg">scan 09</span></td></tr>
+  </tbody></table></div>
+</section>
+
+<section class="prose">
+  <h2>Notes for researchers</h2>
+  <div class="note">The March 24, 1988 Viking Scroll says the last Ricks choir at General Conference was a men’s choir in 1982, but the 1981 and 1983 articles describe the men’s choirs as singing in October 1980 and April 1983. Check the conference records before citing either date.</div>
+  <ul class="plain">
+    <li>Several issues were scanned twice, in different boxes or as both a loose issue and the bound 1927–29 volume. Where that happens the other copies are listed under the main location.</li>
+    <li>Left out: male quartets, high-school glee clubs mentioned in student biographies, visiting groups such as the Guardsmen Quartet and the Tabernacle Choir’s male chorus, and the 1970 “Scandia Male Chorus” of the Key to Scandinavia week, whose connection to the college choirs the articles don’t make clear.</li>
+    <li>Page numbers are the page within the issue PDF, or the scan number in the TIFF file name.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Source folder: W:\DCAM\Scroll\Scroll Rescan Project (Student Rays, Scroll 1927–1929, The Purple Flash, Viking Flashes, Viking Scroll).</p>
+  <p>Prepared November 2026 from OCR and PDF text of the scans.</p>
+</footer>
+</div>
+
+</body>
+</html>

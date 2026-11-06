@@ -1,0 +1,170 @@
+<title>Ricks Men's Glee</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: a single reading column like an archival finding aid; era sections, then a full location register in scrollable tables. */
+:root{
+  --paper:#f7f6f2; --ink:#22231f; --muted:#5d5f57; --rule:#d6d4cb; --card:#ffffff;
+  --accent:#6b2a3a; --accent-soft:#f1e6e8; --tag:#e9e7df;
+  --display:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,"Courier New",monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1b1c19; --ink:#e7e5de; --muted:#a6a79e; --rule:#3a3b36; --card:#232420;
+  --accent:#d99aa8; --accent-soft:#3a262b; --tag:#2e2f2a; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --paper:#1b1c19; --ink:#e7e5de; --muted:#a6a79e; --rule:#3a3b36; --card:#232420;
+  --accent:#d99aa8; --accent-soft:#3a262b; --tag:#2e2f2a; color-scheme:dark }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.prose{max-width:68ch}
+header{display:flex;flex-direction:column;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:22px}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,48px);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-size:26px;margin:0 0 6px;text-wrap:balance}
+h3{font-size:15px;letter-spacing:.08em;text-transform:uppercase;margin:0;color:var(--muted)}
+p{margin:0}
+.lede{font-size:19px;color:var(--ink)}
+.meta{color:var(--muted);font-size:14px}
+section{display:flex;flex-direction:column;gap:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.fact{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.fact b{font-family:var(--display);font-size:24px;font-variant-numeric:tabular-nums}
+.fact span{font-size:14px;color:var(--muted)}
+.eras{display:flex;flex-direction:column;gap:22px}
+.era{display:grid;grid-template-columns:150px 1fr;gap:18px;border-top:1px solid var(--rule);padding-top:16px}
+.era .yrs{font-family:var(--display);font-size:20px;color:var(--accent)}
+.era div{min-width:0;display:flex;flex-direction:column;gap:8px}
+@media (max-width:640px){.era{grid-template-columns:1fr;gap:6px}}
+ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px 24px}
+.people div{border-left:3px solid var(--accent-soft);padding-left:12px;min-width:0}
+.people b{display:block}
+.people span{font-size:14px;color:var(--muted)}
+.note{background:var(--accent-soft);border-radius:6px;padding:14px 16px;font-size:15px}
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--tag);position:sticky;top:0}
+td.date{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+td.paper{white-space:nowrap}
+td.loc{font-family:var(--mono);font-size:12.5px;color:var(--muted);word-break:break-all;min-width:280px}
+td.loc .pg{display:inline-block;background:var(--tag);color:var(--ink);border-radius:3px;padding:0 5px;margin-left:4px;font-family:var(--body);font-size:12px;font-weight:600}
+td.loc .dup{display:block;margin-top:4px;font-size:11.5px}
+tr:last-child td{border-bottom:0}
+footer{border-top:1px solid var(--rule);padding-top:16px;color:var(--muted);font-size:14px;display:flex;flex-direction:column;gap:6px}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Ricks College student newspapers · Scroll Rescan Project</div>
+  <h1>The Men’s Glee at Ricks College</h1>
+  <p class="lede">What the Student Rays, Purple Flash, Viking Flashes and Viking Scroll reported about the college’s men’s glee club and the men’s choruses that followed it, 1916–1988, with the location of every article.</p>
+  <p class="meta">Compiled from a text search of all 17,192 scanned pages in W:\DCAM\Scroll\Scroll Rescan Project. Dates and quotations come from the newspapers; the scanned text is machine-read, so check the original page before citing.</p>
+</header>
+
+<section>
+  <div class="facts">
+    <div class="fact"><b>{{N_GLEE}}</b><span>articles on the Male / Men’s / Boys’ Glee (1916–1958)</span></div>
+    <div class="fact"><b>{{N_COMB}}</b><span>articles on the combined men’s and women’s glee clubs</span></div>
+    <div class="fact"><b>{{N_CHORUS}}</b><span>articles on the later Men’s Chorus and Men’s Choir (1964–1988)</span></div>
+    <div class="fact"><b>{{N_LOC}}</b><span>file locations listed, including duplicate scans</span></div>
+  </div>
+</section>
+
+<section class="prose">
+  <h2>Summary</h2>
+  <p>The papers first mention a Male Glee in 1916, when the Ricks Academy music department already had several “glees.” Through the 1920s and 1930s the Male Glee was a fixture of campus life: it sang at devotionals, commencement and Leadership Week, entertained the Rotary Club and the Chamber of Commerce, and entered the annual stunt fests. From the late 1930s the men’s and ladies’ glees often combined, most visibly for Handel’s “Messiah” each December and for General Conference in Salt Lake City in 1940 and 1948. The name “Male Glee Club” appears for the last time in 1958 under Dr. Chester Hill. After that the men sang as a Men’s or Male Chorus, organized in 1970 under Dr. Richard Robison and later led by Clyde Luke, and in 1980 and 1983 Ricks sent a men’s choir of about 400 voices to the priesthood session of General Conference.</p>
+</section>
+
+<section>
+  <h2>How the group changed</h2>
+  <div class="eras">
+    <div class="era"><div class="yrs">1916–1929</div><div>
+      <p><b>Male Glee, Ricks Academy and Ricks Normal College.</b> The music department runs separate men’s and ladies’ glees. The Male Glee sings at devotionals, for the stake priesthood school and the Rotary Club, gives a 30-minute concert after the Chamber of Commerce banquet at the Idamont Hotel (April 1928), and closes the 1928 commencement with “Blow Ye Winds.” In May 1928 the combined glees under Prof. F. F. Beale replace the annual opera with Coleridge-Taylor’s “Hiawatha’s Wedding Feast.”</p>
+    </div></div>
+    <div class="era"><div class="yrs">1934–1940</div><div>
+      <p><b>Male Glee Club in the Purple Flash and early Viking Scroll years.</b> The glee clubs sing at stake conferences, P.T.A. meetings and assemblies. The Male Glee Club takes second place in the 1935 stunt fest with “A Pirate Ship,” and the Men’s Glee performs “If Men Entertain at Football Teas Like Women Do” in 1936. Under Prof. John M. Anderson the two glees (about 100 voices) present the “Messiah” from 1937, and in April 1940 170 singers from the Glee Club sing at General Conference.</p>
+    </div></div>
+    <div class="era"><div class="yrs">1946–1958</div><div>
+      <p><b>Boys’ Glee and Male Glee after the war.</b> In 1946 the Boys’ Glee meets twice a week and joins the Girls’ Glee as a combined chorus on Fridays. In 1947 the Male Glee sings “Dear Land of Hope,” “House by the Side of the Road” and “Grey Bays” during Leadership Week, and a men’s chorus sings on Anderson’s 1949 radio broadcasts. In 1958 Dr. Chester Hill’s Male Glee Club sings Richter’s “The Creation” and represents the “Unconquerable Viking” in the Homecoming assembly.</p>
+    </div></div>
+    <div class="era"><div class="yrs">1964–1976</div><div>
+      <p><b>Men’s Chorus and Male Chorus.</b> An Associated Men’s Chorus led by Murell Johnson sings at a 1964 assembly. A Men’s Chorus is organized under Dr. Richard W. Robison in 1970 and gives joint Christmas, fall and spring concerts with the Women’s Choir. By 1972 Clyde Luke directs the Men’s Choir; it meets three mornings a week, sings at Baccalaureate and in the “Messiah,” and appears in televised Christmas devotionals.</p>
+    </div></div>
+    <div class="era"><div class="yrs">1980–1988</div><div>
+      <p><b>General Conference men’s choirs.</b> Ricks organizes a men’s choir of students, faculty and staff, about 400 voices, for the priesthood session of General Conference in October 1980 and again in April 1983 (more than 390 voices), both directed by Dr. Richard Robison. In December 1988 Ricks is invited to provide a men’s choir for the April 1989 conference.</p>
+    </div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Directors named in the articles</h2>
+  <div class="people">
+    <div><b>Prof. Harry Dean</b><span>Male Glee, 1927–29</span></div>
+    <div><b>Prof. Billeter</b><span>Ladies’ Glee and Leadership music, 1927–28</span></div>
+    <div><b>Prof. F. F. Beale</b><span>Combined glee clubs, “Hiawatha’s Wedding Feast,” 1928</span></div>
+    <div><b>Prof. John M. Anderson</b><span>Glee clubs, “Messiah,” men’s chorus broadcasts, 1937–1950</span></div>
+    <div><b>Dr. Chester W. Hill</b><span>Male Glee Club, 1958</span></div>
+    <div><b>Murell Johnson</b><span>Associated Men’s Chorus, 1964</span></div>
+    <div><b>Dr. Richard W. Robison</b><span>Men’s Chorus, 1970–71; General Conference men’s choirs, 1980 and 1983</span></div>
+    <div><b>Clyde E. Luke</b><span>Men’s Choir / Male Chorus, 1971–73</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Repertoire mentioned</h2>
+  <ul class="plain prose">
+    <li>“Blow Ye Winds” (1928 commencement)</li>
+    <li>“Hiawatha’s Wedding Feast,” Coleridge-Taylor (combined glees, 1928)</li>
+    <li>Handel, “Messiah” (combined glees, annually from 1937)</li>
+    <li>“Dear Land of Hope,” “House by the Side of the Road,” “Grey Bays” (1947)</li>
+    <li>“The Creation,” Richter, with a reading by Joseph Catmull (1958)</li>
+    <li>“Almighty God of Our Fathers” (1971)</li>
+    <li>“Adam and Eve” and “Dry Bones” (male chorus numbers, 1976)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Article locations: the Male Glee, 1916–1958</h2>
+  <p class="meta prose">Articles that name the men’s group directly as Male Glee, Men’s Glee, Boys’ Glee or men’s chorus.</p>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Paper</th><th>What the article says</th><th>Location</th></tr></thead><tbody>
+{{ROWS_GLEE}}
+  </tbody></table></div>
+</section>
+
+<section>
+  <h2>Article locations: combined glee clubs</h2>
+  <p class="meta prose">Articles about the “glee clubs” or “glees” together, men and women, mostly the annual “Messiah” and General Conference appearances.</p>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Paper</th><th>What the article says</th><th>Location</th></tr></thead><tbody>
+{{ROWS_COMB}}
+  </tbody></table></div>
+</section>
+
+<section>
+  <h2>Article locations: Men’s Chorus and Men’s Choir, 1964–1988</h2>
+  <div class="tablewrap"><table><thead><tr><th>Date</th><th>Paper</th><th>What the article says</th><th>Location</th></tr></thead><tbody>
+{{ROWS_CHORUS}}
+  </tbody></table></div>
+</section>
+
+<section class="prose">
+  <h2>Notes for researchers</h2>
+  <div class="note">The March 24, 1988 Viking Scroll says the last Ricks choir at General Conference was a men’s choir in 1982, but the 1981 and 1983 articles describe the men’s choirs as singing in October 1980 and April 1983. Check the conference records before citing either date.</div>
+  <ul class="plain">
+    <li>Several issues were scanned twice, in different boxes or as both a loose issue and the bound 1927–29 volume. Where that happens the other copies are listed under the main location.</li>
+    <li>Left out: male quartets, high-school glee clubs mentioned in student biographies, visiting groups such as the Guardsmen Quartet and the Tabernacle Choir’s male chorus, and the 1970 “Scandia Male Chorus” of the Key to Scandinavia week, whose connection to the college choirs the articles don’t make clear.</li>
+    <li>Page numbers are the page within the issue PDF, or the scan number in the TIFF file name.</li>
+  </ul>
+</section>
+
+<footer>
+  <p>Source folder: W:\DCAM\Scroll\Scroll Rescan Project (Student Rays, Scroll 1927–1929, The Purple Flash, Viking Flashes, Viking Scroll).</p>
+  <p>Prepared November 2026 from OCR and PDF text of the scans.</p>
+</footer>
+</div>

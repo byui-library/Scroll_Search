@@ -1,0 +1,7 @@
+# Rebuilt from data/ with: python build_index.py
+scroll_text.db
+scroll_text.db-journal
+__pycache__/
+*.pyc
+# Search results people save locally
+*.csv
